@@ -1,0 +1,57 @@
+[
+
+  
+    {
+      "title"			: "Demo Post",
+      "link"			: "https://cboosalis.github.io/blog/mathjax-example/",
+      "excerpt"		: "MathJax is a simple way of including Tex/LaTex/MathML based mathematics in HTML webpages. To get up and running you need to include the MathJax script in the header of your github pages page, and then write some maths. For LaTex, there are two delimiters you need to know about, one for block or displayed mathematics  ... , and the other for inline mathematics  ... ."
+    }
+  
+
+  
+    ,{
+      "title"			: "Articles and Presentations",
+      "link"			: "https://cboosalis.github.io/articles/sample-post/",
+      "excerpt"		: "Past and Forthcoming Presentations"
+    }
+  
+
+
+
+  
+
+  
+
+  
+
+  
+    ,{
+      "title"			: "About",
+      "link"			: "https://cboosalis.github.io/about/",
+      "excerpt"		: "Yet Another About Page…"
+    }
+  
+
+  
+
+  
+
+  
+    ,{
+      "title"			: "Theme Setup",
+      "link"			: "https://cboosalis.github.io/theme-setup/",
+      "excerpt"		: "Instructions on how to install and customize the Jekyll theme So Simple."
+    }
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+]

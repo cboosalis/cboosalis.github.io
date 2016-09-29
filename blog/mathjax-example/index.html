@@ -5,14 +5,18 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>Latest Posts &#8211; Chris Boosalis</title>
-<meta name="description" content="A simple and clean responsive Jekyll theme for words and photos.">
+<title>Demo Post &#8211; Chris Boosalis</title>
+<meta name="description" content="MathJax is a simple way of including Tex/LaTex/MathML based mathematics in HTML webpages. To get up and running you need to include the MathJax script in the header of your github pages page, and then write some maths. For LaTex, there are two delimiters you need to know about, one for block or displayed mathematics \[ ... \], and the other for inline mathematics \( ... \).
 
+">
+<meta name="keywords" content="">
 
 
 <!-- Twitter Cards -->
-<meta name="twitter:title" content="Latest Posts">
-<meta name="twitter:description" content="A simple and clean responsive Jekyll theme for words and photos.">
+<meta name="twitter:title" content="Demo Post">
+<meta name="twitter:description" content="MathJax is a simple way of including Tex/LaTex/MathML based mathematics in HTML webpages. To get up and running you need to include the MathJax script in the header of your github pages page, and then write some maths. For LaTex, there are two delimiters you need to know about, one for block or displayed mathematics \[ ... \], and the other for inline mathematics \( ... \).
+
+">
 
 
 
@@ -22,16 +26,18 @@
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Latest Posts">
-<meta property="og:description" content="A simple and clean responsive Jekyll theme for words and photos.">
-<meta property="og:url" content="https://cboosalis.github.io/">
+<meta property="og:title" content="Demo Post">
+<meta property="og:description" content="MathJax is a simple way of including Tex/LaTex/MathML based mathematics in HTML webpages. To get up and running you need to include the MathJax script in the header of your github pages page, and then write some maths. For LaTex, there are two delimiters you need to know about, one for block or displayed mathematics \[ ... \], and the other for inline mathematics \( ... \).
+
+">
+<meta property="og:url" content="https://cboosalis.github.io/blog/mathjax-example/">
 <meta property="og:site_name" content="Chris Boosalis">
 
 
 
 
 
-<link rel="canonical" href="https://cboosalis.github.io/">
+<link rel="canonical" href="https://cboosalis.github.io/blog/mathjax-example/">
 <link href="https://cboosalis.github.io/feed.xml" type="application/atom+xml" rel="alternate" title="Chris Boosalis Feed">
 
 <!-- https://t.co/dKP3o1e -->
@@ -76,7 +82,7 @@
 
 </head>
 
-<body id="page">
+<body id="post">
 
 <div class="navigation-wrapper">
 	<nav role="navigation" id="site-nav" class="animated drop">
@@ -111,23 +117,58 @@
 
 
 <div id="main" role="main">
-  <article class="entry">
+  <article class="hentry">
     
     <div class="entry-wrapper">
       <header class="entry-header">
-        <h1 class="entry-title">Latest Posts</h1>
+        <ul class="entry-tags">
+          
+        </ul>
+        
+          <h1 class="entry-title">Demo Post</h1>
+        
       </header>
+      <footer class="entry-meta">
+        
+        
+        <span class="author vcard">By <span class="fn">Chris Boosalis</span></span>
+        <span class="entry-date date published"><time datetime="2015-08-10T05:08:50-07:00"><i class="fa fa-calendar-o"></i> August 10, 2015</time></span>
+        
+        
+        
+        
+      </footer>
       <div class="entry-content">
-        <ul class="post-list">
+        <p><a href="http://www.mathjax.org/">MathJax</a> is a simple way of including Tex/LaTex/MathML based mathematics in HTML webpages. To get up and running you need to include the MathJax script in the header of your github pages page, and then write some maths. For LaTex, there are two delimiters you need to know about, one for block or displayed mathematics <code class="highlighter-rouge">\[ ... \]</code>, and the other for inline mathematics <code class="highlighter-rouge">\( ... \)</code>.</p>
 
-  <li><article><a href="https://cboosalis.github.io/blog/mathjax-example/">Demo Post <span class="entry-date"><time datetime="2015-08-10T05:08:50-07:00">August 10, 2015</time></span> <span class="excerpt">MathJax is a simple way of including Tex/LaTex/MathML based mathematics in HTML webpages. To get up and running you need to include the MathJax script in the header of your github pages page, and then write some maths. For LaTex, there are two delimiters you need to know about, one for block or displayed mathematics , and the other for inline mathematics .</span></a></article></li>
+<h2 id="usage">Usage</h2>
 
-  <li><article><a href="https://cboosalis.github.io/articles/sample-post/">Articles and Presentations <span class="entry-date"><time datetime="2011-03-10T00:00:00-08:00">March 10, 2011</time></span> <span class="excerpt">Past and Forthcoming Presentations</span></a></article></li>
+<p>To enable MathJax support be sure Kramdown is your Markdown flavor of choice and MathJax is set to true in your <code class="highlighter-rouge">_config.yml</code> file.</p>
 
-</ul>
+<div class="language-yaml highlighter-rouge"><pre class="highlight"><code><span class="s">markdown</span><span class="pi">:</span> <span class="s">kramdown</span>
+<span class="s">mathjax</span><span class="pi">:</span> <span class="s">true</span>
+</code></pre>
+</div>
 
+<div class="highlighter-rouge"><pre class="highlight"><code>Here is an example MathJax inline rendering \\( 1/x^{2} \\), and here is a block rendering: 
+\\[ \frac{1}{n^{2}} \\]
+</code></pre>
+</div>
+
+<p>Here is an example MathJax inline rendering \( 1/x^{2} \), and here is a block rendering: 
+\[ \frac{1}{n^{2}} \]</p>
+
+<p>The only thing to look out for is the escaping of the backslash when using markdown, so the delimiters become <code class="highlighter-rouge">\\[ ... \\]</code> and <code class="highlighter-rouge">\\( ... \\)</code> for inline and block maths respectively.</p>
+
+        
       </div><!-- /.entry-content -->
     </div><!-- /.entry-wrapper -->
+    <nav class="pagination" role="navigation">
+      
+        <a href="https://cboosalis.github.io/articles/sample-post/" class="btn" title="Articles and Presentations">Previous</a>
+      
+      
+    </nav><!-- /.pagination -->
   </article>
 </div><!-- /#main -->
 
