@@ -3,7 +3,7 @@
   
     {
       "title"			: "Association of American Colleges and Universities",
-      "link"			: "http://cboosalis.github.io/articles/AACU/",
+      "link"			: "https://cboosalis.github.io/articles/AACU/",
       "excerpt"		: "Learning from dashboards of direct and indirect student learning outcomes…."
     }
   
@@ -11,7 +11,7 @@
   
     ,{
       "title"			: "Future Technologies Conference",
-      "link"			: "http://cboosalis.github.io/articles/FTC/",
+      "link"			: "https://cboosalis.github.io/articles/FTC/",
       "excerpt"		: "Creating powerful dashboards and visualizations of direct and indirect slos measures using Google’s Dataset Publishing Language…."
     }
   
@@ -19,7 +19,7 @@
   
     ,{
       "title"			: "California Association for Institutional Research",
-      "link"			: "http://cboosalis.github.io/articles/CAIR/",
+      "link"			: "https://cboosalis.github.io/articles/CAIR/",
       "excerpt"		: "Creating dashboards of direct and indirect slos measures in r"
     }
   
@@ -27,7 +27,7 @@
   
     ,{
       "title"			: "Pacific Conference on Statistical Computing and Data Mining",
-      "link"			: "http://cboosalis.github.io/articles/PCSC/",
+      "link"			: "https://cboosalis.github.io/articles/PCSC/",
       "excerpt"		: "Plotting direct and indirect measures of student achievement and perception in two and three dimensions using r"
     }
   
@@ -35,7 +35,7 @@
   
     ,{
       "title"			: "Society for Information Technology and Teacher Education",
-      "link"			: "http://cboosalis.github.io/articles/SITE/",
+      "link"			: "https://cboosalis.github.io/articles/SITE/",
       "excerpt"		: "Looming, plotting, and animating historical time series measures of direct and indirect assessments…."
     }
   
@@ -43,7 +43,7 @@
   
     ,{
       "title"			: "MathJax Example",
-      "link"			: "http://cboosalis.github.io/blog/mathjax-example/",
+      "link"			: "https://cboosalis.github.io/blog/mathjax-example/",
       "excerpt"		: "MathJax is a simple way of including Tex/LaTex/MathML based mathematics in HTML webpages. To get up and running you need to include the MathJax script in the header of your github pages page, and then write some maths. For LaTex, there are two delimiters you need to know about, one for block or displayed mathematics  ... , and the other for inline mathematics  ... ."
     }
   
@@ -51,7 +51,7 @@
   
     ,{
       "title"			: "Hello World",
-      "link"			: "http://cboosalis.github.io/blog/hello-world/",
+      "link"			: "https://cboosalis.github.io/blog/hello-world/",
       "excerpt"		: "You’ll find this post in your _posts directory - edit this post and re-build (or run with the -w switch) to see your changes!To add new posts, simply add a file in the _posts directory that follows the convention: YYYY-MM-DD-name-of-post.ext."
     }
   
@@ -67,7 +67,7 @@
   
     ,{
       "title"			: "Obligatory About Page",
-      "link"			: "http://cboosalis.github.io/about/",
+      "link"			: "https://cboosalis.github.io/about/",
       "excerpt"		: "Whatsallthisabout??"
     }
   
@@ -79,7 +79,7 @@
   
     ,{
       "title"			: "Theme Setup",
-      "link"			: "http://cboosalis.github.io/theme-setup/",
+      "link"			: "https://cboosalis.github.io/theme-setup/",
       "excerpt"		: "Instructions on how to install and customize the Jekyll theme So Simple."
     }
   
