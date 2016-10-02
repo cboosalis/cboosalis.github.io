@@ -1,0 +1,19 @@
+---
+layout: page
+title: Obligatory About Page
+excerpt: "Whatsallthisabout??"
+modified: 2016-10-02T19:44:38.564948-04:00
+image:
+  feature: 
+  credit: 
+  creditlink: 
+---
+
+I have always wanted to have my very own github site with a snappy Jekyll theme. Thanks to slash illustrator [Michael Rose](http://mademistakes.com), I now have one. Thank you, Michael!
+
+## This site will be a repository for various activities:
+
+* R-code snips
+* Shiny examples
+* Articles and presentations
+
