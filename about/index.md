@@ -1,8 +1,8 @@
 ---
-layout: page
 title: Obligatory About Page
-excerpt: "Whatsallthisabout??"
-modified: 2016-10-02T19:44:38.564948-04:00
+layout: page
+excerpt: Whatsallthisabout??
+modified: 2016-10-02 23:44:38.564000000 Z
 image:
   feature: 
   credit: 

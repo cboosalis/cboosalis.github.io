@@ -1,14 +1,13 @@
 ---
+title: Hello World
+date: 2014-08-08 19:39:55 Z
+categories:
+- blog
 layout: post
-title: "Hello World"
-modified:
-categories: blog
-excerpt:
-tags: []
+modified: 2016-06-01 18:19:19 Z
+excerpt: 
 image:
-  feature:
-date: 2014-08-08T15:39:55-04:00
-modified: 2016-06-01T14:19:19-04:00
+  feature: 
 ---
 
 You'll find this post in your `_posts` directory - edit this post and re-build (or run with the `-w` switch) to see your changes!

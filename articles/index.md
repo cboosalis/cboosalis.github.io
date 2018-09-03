@@ -1,7 +1,7 @@
 ---
-layout: page
 title: Articles and Presentations
-excerpt: "An archive of articles sorted by date."
+layout: page
+excerpt: An archive of articles sorted by date.
 search_omit: true
 ---
 
