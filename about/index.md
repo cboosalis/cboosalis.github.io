@@ -1,13 +1,15 @@
 ---
 title: Obligatory About Page
-layout: page
 excerpt: Whatsallthisabout??
 modified: 2016-10-02 23:44:38.564000000 Z
 image:
   feature: 
   credit: 
   creditlink: 
+layout: page
 ---
+
+SITELEAF!
 
 I have always wanted to have my very own github site with a snappy Jekyll theme. Thanks to slash illustrator [Michael Rose](http://mademistakes.com), I now have one. Thank you, Michael!
 
