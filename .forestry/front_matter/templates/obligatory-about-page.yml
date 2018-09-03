@@ -1,0 +1,46 @@
+---
+label: Obligatory About Page
+hide_body: 
+is_partial: 
+fields:
+- name: title
+  label: Title
+  type: text
+  hidden: false
+  default: ''
+- name: layout
+  label: Layout
+  type: text
+  hidden: false
+  default: ''
+- name: excerpt
+  label: Excerpt
+  type: textarea
+  hidden: false
+  default: ''
+- name: modified
+  label: Modified
+  type: datetime
+  hidden: false
+  default: ''
+- name: image
+  label: Image
+  type: field_group
+  fields:
+  - name: feature
+    label: Feature
+    type: text
+    hidden: false
+    default: ''
+  - name: credit
+    label: Credit
+    type: text
+    hidden: false
+    default: ''
+  - name: creditlink
+    label: Creditlink
+    type: text
+    hidden: false
+    default: ''
+  hidden: false
+  default: ''
