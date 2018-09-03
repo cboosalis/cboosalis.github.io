@@ -44,3 +44,5 @@ fields:
     default: ''
   hidden: false
   default: ''
+pages:
+- the-unemployables.md
