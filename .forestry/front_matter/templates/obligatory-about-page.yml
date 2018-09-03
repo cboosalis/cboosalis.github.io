@@ -1,7 +1,7 @@
 ---
 label: Obligatory About Page
-hide_body: 
-is_partial: 
+hide_body: true
+is_partial: false
 fields:
 - name: title
   label: Title
@@ -44,5 +44,6 @@ fields:
     default: ''
   hidden: false
   default: ''
+- type: text
 pages:
 - the-unemployables.md
