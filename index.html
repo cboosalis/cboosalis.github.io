@@ -6,16 +6,15 @@
 
 <title>Chris Boosalis Applications</title>
 
-https://fonts.googleapis.com
-https://fonts.gstatic.com
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&
+<link rel="preconnect" href="https://fonts.gstatic.com
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700p
 
 <style>
 
 :root{
-    --blue:#2563eb;
-    --blue-dark:#1d4ed8;
-    --bg:#f4f7fb;
+    --primary:#2563eb;
+    --primary-dark:#1d4ed8;
+    --background:#f4f7fb;
     --card:#ffffff;
     --text:#111827;
     --muted:#6b7280;
@@ -29,7 +28,7 @@ https://fonts.gstatic.com
 
 body{
     font-family:'Inter',sans-serif;
-    background:var(--bg);
+    background:var(--background);
     color:var(--text);
 }
 
@@ -46,19 +45,19 @@ body{
 }
 
 .hero p{
-    font-size:1.2rem;
+    font-size:1.15rem;
     opacity:.95;
 }
 
 .container{
     max-width:1400px;
-    margin:auto;
+    margin:0 auto;
     padding:40px 20px;
 }
 
 .grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(380px,1fr));
     gap:30px;
 }
 
@@ -66,18 +65,19 @@ body{
     background:white;
     border-radius:18px;
     overflow:hidden;
-    box-shadow:0 10px 30px rgba(0,0,0,0.08);
-    transition:.25s;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.25s ease;
 }
 
 .card:hover{
     transform:translateY(-5px);
-    box-shadow:0 20px 40px rgba(0,0,0,0.15);
+    box-shadow:0 18px 40px rgba(0,0,0,.15);
 }
 
 .preview{
     height:260px;
     overflow:hidden;
+    background:#e5e7eb;
 }
 
 .preview img{
@@ -93,57 +93,44 @@ body{
 
 .badge{
     display:inline-block;
-    background:#dbeafe;
-    color:#1e40af;
+    margin-bottom:12px;
+    padding:6px 12px;
+    border-radius:999px;
     font-size:.8rem;
     font-weight:600;
-    padding:5px 10px;
-    border-radius:30px;
-    margin-bottom:12px;
+    background:#dbeafe;
+    color:#1e40af;
 }
 
 .content h2{
     margin-bottom:10px;
-    font-size:1.35rem;
+    font-size:1.4rem;
 }
 
 .content p{
     color:var(--muted);
     margin-bottom:20px;
+    line-height:1.6;
 }
 
 .button{
     display:inline-block;
-    background:var(--blue);
+    background:var(--primary);
     color:white;
     text-decoration:none;
     padding:12px 20px;
-    border-radius:10px;
     font-weight:600;
+    border-radius:10px;
 }
 
 .button:hover{
-    background:var(--blue-dark);
+    background:var(--primary-dark);
 }
 
 footer{
     text-align:center;
-    padding:50px;
+    padding:50px 20px;
     color:var(--muted);
-}
-
-.coming-soon{
-    height:260px;
-    background:linear-gradient(135deg,#334155,#111827);
-    color:white;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-}
-
-.coming-soon h3{
-    font-size:2rem;
 }
 
 </style>
@@ -153,7 +140,9 @@ footer{
 
 <section class="hero">
     <h1>Chris Boosalis Applications</h1>
-    <p>Research • Assessment • Teaching • Scholarly Development</p>
+    <p>
+        Research • Assessment • Teaching • Equity • Scholarly Development
+    </p>
 </section>
 
 <div class="container">
@@ -164,15 +153,16 @@ footer{
 
     <div class="card">
         <div class="preview">
-            <img s/equity-dashboard.png
+            images/equity-dashboard.png
         </div>
 
         <div class="content">
             <span class="badge">Dashboard</span>
+
             <h2>Equity to Action Dashboard</h2>
 
             <p>
-                Data exploration and equity-focused decision support tools.
+                Data exploration and equity-focused decision support platform.
             </p>
 
             <a class="button"
@@ -192,6 +182,7 @@ footer{
 
         <div class="content">
             <span class="badge">Review Tool</span>
+
             <h2>Commenting</h2>
 
             <p>
@@ -202,20 +193,20 @@ footer{
                href="https://commenting.chrisboosalis.com"
                target="_blank">
                Open Application
-            </a>
-        </div>
-    </div>
+ >
 
-    <!-- Clinical Practice -->
+    <div class="card">
+        <div class="preview">
+            <img src="images/clinical-practice.  </div>
 
-    <ages/clinical-practice.png"
-                 alt="Clinical Practice Assessment in Four Dimensions">
-   nt</span>
+        <div class="content">
+            <span class="badge">Assessment</span>
+
             <h2>Clinical Practice Assessment in Four Dimensions</h2>
 
             <p>
                 Clinical assessment and evaluation framework supporting
-                evidence-based review.
+                evidence-based review and reflection.
             </p>
 
             <a class="button"
@@ -226,17 +217,19 @@ footer{
         </div>
     </div>
 
-    <!-- Intro to Research -->
+    <!-- Introduction to Research -->
 
     <div class="card">
         <div class="preview">
-            <img src="images/introduction-to-research.png"
-                 alt="Introduction to          <span class="badge">Research</span>
+            <img src="images/introduction-to-research   </div>
+
+        <div class="content">
+            <span class="badge">Research</span>
+
             <h2>Introduction to Research App</h2>
 
             <p>
-                Research methods, instructional content,
-                and scholarly inquiry resources.
+                Research methods instruction, scholarly inquiry, and educational resources.
             </p>
 
             <a class="button"
@@ -251,39 +244,48 @@ footer{
 
     <div class="card">
         <div class="preview">
-            <img src="images/thesis-formatter.png"
-                 altass="content">
-            <span class="badge">Authoring</span>
-            <h2>Thesis Formatter</h2>
-
-            <p>
-                Al.Bert 1.0. Thesis formatting assistant for document preparation.
-            </p>
-
-            <a class="button"
-               href="https://thesisformatter.chrisboosalis.com"
-               target="_blank">
-               Open Application
-            </a>
-        </div>
-    </divng-soon">
-            <div>
-                <h3>Thesis / Project Mentor</h3>
-                <p>Coming Soon</p>
-            </div>
+            images/thesis-formatter.png
         </div>
 
         <div class="content">
-            <span class="badge">In Development</span>
+            <span class="badge">Authoring Tool</span>
+
+            <h2>Thesis Formatter</h2>
+
+            <p>
+                Al.Bert 1.0. Thesis formatting and document preparation support.
+            </p>
+
+            <a class="button"
+ tter.chrisboosalis.com
+               Open Application
+            </a>
+        </div>
+    </div>
+
+    <!-- Thesis / Project Mentor -->
+
+    <div class="card">
+        <div class="preview">
+            images/mentor-coming-soon.png
+        </div>
+
+        <div class="content">
+            <span class="badge">Active Development</span>
 
             <h2>Thesis / Project Mentor</h2>
 
             <p>
-                Faculty and student environment for thesis and project review,
-                mentoring, calibration, and scholarly development.
+                Faculty and student platform for manuscript review,
+                project-function mapping, source-bound analysis,
+                private student practice, and scholarly development.
+            </p>
+
+            <p>
+                <strong>Current Candidate:</strong> R25<br>
+                <strong>Status:</strong> Sandbox Green / Not Admitted
             </p>
         </div>
-
     </div>
 
 </div>
@@ -291,7 +293,7 @@ footer{
 </div>
 
 <footer>
-    © Chris Boosalis
+    © Chris Boosalis • Research • Teaching • Assessment • Scholarly Development
 </footer>
 
 </body>
