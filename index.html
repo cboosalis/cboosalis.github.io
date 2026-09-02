@@ -6,78 +6,78 @@
 
 <title>Chris Boosalis Applications</title>
 
-<link href="https://fonts.googleapis.com/css2?family=00;400;600;700&display=swap
+https://fonts.googleapis.com
+https://fonts.gstatic.com
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&
 
 <style>
 
 :root{
-    --primary:#2563eb;
-    --primary-dark:#1d4ed8;
-    --bg:#f5f7fb;
+    --blue:#2563eb;
+    --blue-dark:#1d4ed8;
+    --bg:#f4f7fb;
     --card:#ffffff;
-    --text:#1f2937;
+    --text:#111827;
     --muted:#6b7280;
 }
 
 *{
-    box-sizing:border-box;
     margin:0;
     padding:0;
+    box-sizing:border-box;
 }
 
 body{
     font-family:'Inter',sans-serif;
     background:var(--bg);
     color:var(--text);
-    line-height:1.5;
 }
 
-header{
+.hero{
     background:linear-gradient(135deg,#1e3a8a,#2563eb);
     color:white;
-    padding:70px 20px;
     text-align:center;
+    padding:80px 20px;
 }
 
-header h1{
+.hero h1{
     font-size:3rem;
     margin-bottom:10px;
 }
 
-header p{
-    font-size:1.15rem;
+.hero p{
+    font-size:1.2rem;
     opacity:.95;
 }
 
 .container{
-    width:min(1400px,95%);
+    max-width:1400px;
     margin:auto;
-    padding:40px 0;
+    padding:40px 20px;
 }
 
 .grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(380px,1fr));
-    gap:28px;
+    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+    gap:30px;
 }
 
 .card{
-    background:var(--card);
-    border-radius:20px;
+    background:white;
+    border-radius:18px;
     overflow:hidden;
-    box-shadow:0 8px 30px rgba(0,0,0,.08);
-    transition:.25s ease;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    transition:.25s;
 }
 
 .card:hover{
-    transform:translateY(-6px);
-    box-shadow:0 18px 40px rgba(0,0,0,.15);
+    transform:translateY(-5px);
+    box-shadow:0 20px 40px rgba(0,0,0,0.15);
 }
 
 .preview{
-    height:280px;
+    height:260px;
     overflow:hidden;
-    background:#e5e7eb;
 }
 
 .preview img{
@@ -91,6 +91,17 @@ header p{
     padding:24px;
 }
 
+.badge{
+    display:inline-block;
+    background:#dbeafe;
+    color:#1e40af;
+    font-size:.8rem;
+    font-weight:600;
+    padding:5px 10px;
+    border-radius:30px;
+    margin-bottom:12px;
+}
+
 .content h2{
     margin-bottom:10px;
     font-size:1.35rem;
@@ -101,59 +112,34 @@ header p{
     margin-bottom:20px;
 }
 
-.actions{
-    display:flex;
-    gap:12px;
-    flex-wrap:wrap;
-}
-
-.btn{
-    padding:10px 18px;
-    border-radius:10px;
-    text-decoration:none;
-    font-weight:600;
-    transition:.2s;
-}
-
-.btn-primary{
-    background:var(--primary);
+.button{
+    display:inline-block;
+    background:var(--blue);
     color:white;
+    text-decoration:none;
+    padding:12px 20px;
+    border-radius:10px;
+    font-weight:600;
 }
 
-.btn-primary:hover{
-    background:var(--primary-dark);
-}
-
-.btn-secondary{
-    background:#eef2ff;
-    color:#1e3a8a;
+.button:hover{
+    background:var(--blue-dark);
 }
 
 footer{
     text-align:center;
-    padding:50px 20px;
+    padding:50px;
     color:var(--muted);
 }
 
-.badge{
-    display:inline-block;
-    background:#dbeafe;
-    color:#1e40af;
-    font-size:.8rem;
-    padding:5px 10px;
-    border-radius:999px;
-    margin-bottom:12px;
-    font-weight:600;
-}
-
 .coming-soon{
+    height:260px;
     background:linear-gradient(135deg,#334155,#111827);
     color:white;
     display:flex;
     justify-content:center;
     align-items:center;
     text-align:center;
-    height:280px;
 }
 
 .coming-soon h3{
@@ -161,41 +147,39 @@ footer{
 }
 
 </style>
-
 </head>
+
 <body>
 
-<header>
+<section class="hero">
     <h1>Chris Boosalis Applications</h1>
-    <p>Research, Assessment, Documentation, Equity, and Thesis Development Tools</p>
-</header>
+    <p>Research • Assessment • Teaching • Scholarly Development</p>
+</section>
 
 <div class="container">
 
 <div class="grid">
 
-    <!-- Equity to Action -->
+    <!-- Equity -->
 
     <div class="card">
         <div class="preview">
-            <img src="images/equity-dashboard.  </div>
+            <img s/equity-dashboard.png
+        </div>
 
         <div class="content">
             <span class="badge">Dashboard</span>
             <h2>Equity to Action Dashboard</h2>
 
             <p>
-                Data exploration and equity-focused decision support
-                platform for educational environments.
+                Data exploration and equity-focused decision support tools.
             </p>
 
-            <div class="actions">
-                <a class="btn btn-primary"
-                   href="https://explorer.chrisboosalis.com"
-                   target="_blank">
-                   Open Application
-                </a>
-            </div>
+            <a class="button"
+               href="https://explorer.chrisboosalis.com"
+               target="_blank">
+               Open Application
+            </a>
         </div>
     </div>
 
@@ -211,60 +195,55 @@ footer{
             <h2>Commenting</h2>
 
             <p>
-                Document review and commenting environment focused on
-                structured feedback and communication.
+                Document review and structured commenting environment.
             </p>
 
-            <div class="actions">
-                <a class="btn btn-primary"
-                   href="https://commenting.chrisboosalis.com"
-                   target="_blank">
-                   Open Application
-                </a>
-            </div>
-        <ss="preview">
-            <img src="images/clinical-practice.png"
-                 alt="Clinical Practice        <span class="badge">Assessment</span>
+            <a class="button"
+               href="https://commenting.chrisboosalis.com"
+               target="_blank">
+               Open Application
+            </a>
+        </div>
+    </div>
+
+    <!-- Clinical Practice -->
+
+    <ages/clinical-practice.png"
+                 alt="Clinical Practice Assessment in Four Dimensions">
+   nt</span>
             <h2>Clinical Practice Assessment in Four Dimensions</h2>
 
             <p>
                 Clinical assessment and evaluation framework supporting
-                evidence-based review and reflection.
+                evidence-based review.
             </p>
 
-            <div class="actions">
-                <a class="btn btn-primary"
-                   href="https://75326bfd-230b-463f-83f0-8c4f11b60add.plotly.app"
-                   target="_blank">
-                   Open Application
-                </a>
-            </div>
+            <a class="button"
+               href="https://75326bfd-230b-463f-83f0-8c4f11b60add.plotly.app"
+               target="_blank">
+               Open Application
+            </a>
         </div>
     </div>
 
-    <!-- Introduction to Research -->
+    <!-- Intro to Research -->
 
     <div class="card">
         <div class="preview">
-            images/introduction-to-research.png
-        </div>
-
-        <div class="content">
-            <span class="badge">Research</span>
+            <img src="images/introduction-to-research.png"
+                 alt="Introduction to          <span class="badge">Research</span>
             <h2>Introduction to Research App</h2>
 
             <p>
-                Research methods instruction, educational content,
-                learning resources, and scholarly inquiry support.
+                Research methods, instructional content,
+                and scholarly inquiry resources.
             </p>
 
-            <div class="actions">
-                <a class="btn btn-primary"
-                   href="https://research-app-boosalis-e5h6e3chfsgsbefd.westus-01.azurewebsites.net"
-                   target="_blank">
-                   Open Application
-                </a>
-            </div>
+            <a class="button"
+               href="https://research-app-boosalis-e5h6e3chfsgsbefd.westus-01.azurewebsites.net"
+               target="_blank">
+               Open Application
+            </a>
         </div>
     </div>
 
@@ -272,48 +251,37 @@ footer{
 
     <div class="card">
         <div class="preview">
-            images/thesis-formatter.png
-        </div>
-
-        <div class="content">
-            <span class="badge">Authoring Tool</span>
+            <img src="images/thesis-formatter.png"
+                 altass="content">
+            <span class="badge">Authoring</span>
             <h2>Thesis Formatter</h2>
 
             <p>
-                Al.Bert 1.0. Thesis formatting support designed to help
-                students prepare documents for submission requirements.
+                Al.Bert 1.0. Thesis formatting assistant for document preparation.
             </p>
 
-            <div class="actions">
-                <ttps://thesisformatter.chrisboosalis.com
-                   Open Application
-                </a>
-            </div>
+            <a class="button"
+               href="https://thesisformatter.chrisboosalis.com"
+               target="_blank">
+               Open Application
+            </a>
         </div>
-    </div>
-
-    <!-- Thesis / Project Mentor -->
-
-    <div class="card">
-
-        <div class="coming-soon">
+    </divng-soon">
             <div>
                 <h3>Thesis / Project Mentor</h3>
-                <p>Under Development</p>
+                <p>Coming Soon</p>
             </div>
         </div>
 
         <div class="content">
-            <span class="badge">Coming Soon</span>
+            <span class="badge">In Development</span>
 
             <h2>Thesis / Project Mentor</h2>
 
             <p>
-                Faculty and student platform for manuscript review,
-                mentoring, evidence-based critique, project analysis,
-                instructional guidance, and scholarly development.
+                Faculty and student environment for thesis and project review,
+                mentoring, calibration, and scholarly development.
             </p>
-
         </div>
 
     </div>
@@ -323,7 +291,7 @@ footer{
 </div>
 
 <footer>
-    © Chris Boosalis · Research, Teaching, Assessment, and Scholarly Development Applications
+    © Chris Boosalis
 </footer>
 
 </body>
