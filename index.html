@@ -1,300 +1,363 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Chris Boosalis Applications</title>
+    <title>Chris Boosalis Applications</title>
 
-<link rel="preconnect" href="https://fonts.gstatic.com
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700p
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
 
-<style>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --background: #f4f7fb;
+            --card: #ffffff;
+            --text: #111827;
+            --muted: #6b7280;
+        }
 
-:root{
-    --primary:#2563eb;
-    --primary-dark:#1d4ed8;
-    --background:#f4f7fb;
-    --card:#ffffff;
-    --text:#111827;
-    --muted:#6b7280;
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--background);
+            color: var(--text);
+        }
 
-body{
-    font-family:'Inter',sans-serif;
-    background:var(--background);
-    color:var(--text);
-}
+        .hero {
+            background: linear-gradient(135deg, #1e3a8a, #2563eb);
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
 
-.hero{
-    background:linear-gradient(135deg,#1e3a8a,#2563eb);
-    color:white;
-    text-align:center;
-    padding:80px 20px;
-}
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
 
-.hero h1{
-    font-size:3rem;
-    margin-bottom:10px;
-}
+        .hero p {
+            font-size: 1.15rem;
+            opacity: .95;
+        }
 
-.hero p{
-    font-size:1.15rem;
-    opacity:.95;
-}
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
 
-.container{
-    max-width:1400px;
-    margin:0 auto;
-    padding:40px 20px;
-}
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 30px;
+        }
 
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(380px,1fr));
-    gap:30px;
-}
+        .card {
+            background: var(--card);
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+            transition: .25s ease;
+        }
 
-.card{
-    background:white;
-    border-radius:18px;
-    overflow:hidden;
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
-    transition:.25s ease;
-}
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 18px 40px rgba(0, 0, 0, .15);
+        }
 
-.card:hover{
-    transform:translateY(-5px);
-    box-shadow:0 18px 40px rgba(0,0,0,.15);
-}
+        .preview {
+            height: 260px;
+            overflow: hidden;
+            background: #e5e7eb;
+        }
 
-.preview{
-    height:260px;
-    overflow:hidden;
-    background:#e5e7eb;
-}
+        .preview img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
 
-.preview img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    display:block;
-}
+        .content {
+            padding: 24px;
+        }
 
-.content{
-    padding:24px;
-}
+        .badge {
+            display: inline-block;
+            margin-bottom: 12px;
+            padding: 6px 12px;
+            border-radius: 999px;
+            font-size: .8rem;
+            font-weight: 600;
+            background: #dbeafe;
+            color: #1e40af;
+        }
 
-.badge{
-    display:inline-block;
-    margin-bottom:12px;
-    padding:6px 12px;
-    border-radius:999px;
-    font-size:.8rem;
-    font-weight:600;
-    background:#dbeafe;
-    color:#1e40af;
-}
+        .content h2 {
+            margin-bottom: 10px;
+            font-size: 1.4rem;
+        }
 
-.content h2{
-    margin-bottom:10px;
-    font-size:1.4rem;
-}
+        .content p {
+            color: var(--muted);
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
 
-.content p{
-    color:var(--muted);
-    margin-bottom:20px;
-    line-height:1.6;
-}
+        .button {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            font-weight: 600;
+            border-radius: 10px;
+        }
 
-.button{
-    display:inline-block;
-    background:var(--primary);
-    color:white;
-    text-decoration:none;
-    padding:12px 20px;
-    font-weight:600;
-    border-radius:10px;
-}
+        .button:hover {
+            background: var(--primary-dark);
+        }
 
-.button:hover{
-    background:var(--primary-dark);
-}
+        footer {
+            text-align: center;
+            padding: 50px 20px;
+            color: var(--muted);
+        }
 
-footer{
-    text-align:center;
-    padding:50px 20px;
-    color:var(--muted);
-}
+        @media (max-width: 500px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
 
-</style>
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<section class="hero">
-    <h1>Chris Boosalis Applications</h1>
-    <p>
-        Research • Assessment • Teaching • Equity • Scholarly Development
-    </p>
-</section>
+    <section class="hero">
+        <h1>Chris Boosalis Applications</h1>
+        <p>Research • Assessment • Teaching • Equity • Scholarly Development</p>
+    </section>
 
-<div class="container">
+    <main class="container">
 
-<div class="grid">
+        <div class="grid">
 
-    <!-- Equity -->
+            <!-- Equity -->
+            <div class="card">
 
-    <div class="card">
-        <div class="preview">
-            images/equity-dashboard.png
+                <div class="preview">
+                    <img
+                        src="images/equity-dashboard.png"
+                        alt="Equity to Action Dashboard"
+                    >
+                </div>
+
+                <div class="content">
+                    <span class="badge">Dashboard</span>
+
+                    <h2>Equity to Action Dashboard</h2>
+
+                    <p>
+                        Data exploration and equity-focused decision support platform.
+                    </p>
+
+                    <a
+                        class="button"
+                        href="https://explorer.chrisboosalis.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Open Application
+                    </a>
+                </div>
+
+            </div>
+
+
+            <!-- Commenting -->
+            <div class="card">
+
+                <div class="preview">
+                    <img
+                        src="images/commenting.png"
+                        alt="Commenting Application"
+                    >
+                </div>
+
+                <div class="content">
+                    <span class="badge">Review Tool</span>
+
+                    <h2>Commenting</h2>
+
+                    <p>
+                        Document review and structured commenting environment.
+                    </p>
+
+                    <a
+                        class="button"
+                        href="https://commenting.chrisboosalis.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Open Application
+                    </a>
+                </div>
+
+            </div>
+
+
+            <!-- Clinical Practice -->
+            <div class="card">
+
+                <div class="preview">
+                    <img
+                        src="images/clinical-practice.png"
+                        alt="Clinical Practice Assessment"
+                    >
+                </div>
+
+                <div class="content">
+                    <span class="badge">Assessment</span>
+
+                    <h2>Clinical Practice Assessment in Four Dimensions</h2>
+
+                    <p>
+                        Clinical assessment and evaluation framework supporting
+                        evidence-based review and reflection.
+                    </p>
+
+                    <a
+                        class="button"
+                        href="https://75326bfd-230b-463f-83f0-8c4f11b60add.plotly.app"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Open Application
+                    </a>
+                </div>
+
+            </div>
+
+
+            <!-- Introduction to Research -->
+            <div class="card">
+
+                <div class="preview">
+                    <img
+                        src="images/introduction-to-research.png"
+                        alt="Introduction to Research Application"
+                    >
+                </div>
+
+                <div class="content">
+                    <span class="badge">Research</span>
+
+                    <h2>Introduction to Research App</h2>
+
+                    <p>
+                        Research methods instruction, scholarly inquiry,
+                        and educational resources.
+                    </p>
+
+                    <a
+                        class="button"
+                        href="https://research-app-boosalis-e5h6e3chfsgsbefd.westus-01.azurewebsites.net"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Open Application
+                    </a>
+                </div>
+
+            </div>
+
+
+            <!-- Thesis Formatter -->
+            <div class="card">
+
+                <div class="preview">
+                    <img
+                        src="images/thesis-formatter.png"
+                        alt="Thesis Formatter"
+                    >
+                </div>
+
+                <div class="content">
+                    <span class="badge">Authoring Tool</span>
+
+                    <h2>Thesis Formatter</h2>
+
+                    <p>
+                        Al.Bert 1.0. Thesis formatting and document preparation support.
+                    </p>
+
+                    <!-- Replace URL below with your actual Thesis Formatter URL -->
+                    <a
+                        class="button"
+                        href="https://formatter.chrisboosalis.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Open Application
+                    </a>
+                </div>
+
+            </div>
+
+
+            <!-- Thesis / Project Mentor -->
+            <div class="card">
+
+                <div class="preview">
+                    <img
+                        src="images/mentor-coming-soon.png"
+                        alt="Thesis Project Mentor Coming Soon"
+                    >
+                </div>
+
+                <div class="content">
+                    <span class="badge">Active Development</span>
+
+                    <h2>Thesis / Project Mentor</h2>
+
+                    <p>
+                        Faculty and student platform for manuscript review,
+                        project-function mapping, source-bound analysis,
+                        private student practice, and scholarly development.
+                    </p>
+
+                    <p>
+                        <strong>Current Candidate:</strong> R25<br>
+                        <strong>Status:</strong> Sandbox Green / Not Admitted
+                    </p>
+                </div>
+
+            </div>
+
         </div>
 
-        <div class="content">
-            <span class="badge">Dashboard</span>
+    </main>
 
-            <h2>Equity to Action Dashboard</h2>
-
-            <p>
-                Data exploration and equity-focused decision support platform.
-            </p>
-
-            <a class="button"
-               href="https://explorer.chrisboosalis.com"
-               target="_blank">
-               Open Application
-            </a>
-        </div>
-    </div>
-
-    <!-- Commenting -->
-
-    <div class="card">
-        <div class="preview">
-            images/commenting.png
-        </div>
-
-        <div class="content">
-            <span class="badge">Review Tool</span>
-
-            <h2>Commenting</h2>
-
-            <p>
-                Document review and structured commenting environment.
-            </p>
-
-            <a class="button"
-               href="https://commenting.chrisboosalis.com"
-               target="_blank">
-               Open Application
- >
-
-    <div class="card">
-        <div class="preview">
-            <img src="images/clinical-practice.  </div>
-
-        <div class="content">
-            <span class="badge">Assessment</span>
-
-            <h2>Clinical Practice Assessment in Four Dimensions</h2>
-
-            <p>
-                Clinical assessment and evaluation framework supporting
-                evidence-based review and reflection.
-            </p>
-
-            <a class="button"
-               href="https://75326bfd-230b-463f-83f0-8c4f11b60add.plotly.app"
-               target="_blank">
-               Open Application
-            </a>
-        </div>
-    </div>
-
-    <!-- Introduction to Research -->
-
-    <div class="card">
-        <div class="preview">
-            <img src="images/introduction-to-research   </div>
-
-        <div class="content">
-            <span class="badge">Research</span>
-
-            <h2>Introduction to Research App</h2>
-
-            <p>
-                Research methods instruction, scholarly inquiry, and educational resources.
-            </p>
-
-            <a class="button"
-               href="https://research-app-boosalis-e5h6e3chfsgsbefd.westus-01.azurewebsites.net"
-               target="_blank">
-               Open Application
-            </a>
-        </div>
-    </div>
-
-    <!-- Thesis Formatter -->
-
-    <div class="card">
-        <div class="preview">
-            images/thesis-formatter.png
-        </div>
-
-        <div class="content">
-            <span class="badge">Authoring Tool</span>
-
-            <h2>Thesis Formatter</h2>
-
-            <p>
-                Al.Bert 1.0. Thesis formatting and document preparation support.
-            </p>
-
-            <a class="button"
- tter.chrisboosalis.com
-               Open Application
-            </a>
-        </div>
-    </div>
-
-    <!-- Thesis / Project Mentor -->
-
-    <div class="card">
-        <div class="preview">
-            images/mentor-coming-soon.png
-        </div>
-
-        <div class="content">
-            <span class="badge">Active Development</span>
-
-            <h2>Thesis / Project Mentor</h2>
-
-            <p>
-                Faculty and student platform for manuscript review,
-                project-function mapping, source-bound analysis,
-                private student practice, and scholarly development.
-            </p>
-
-            <p>
-                <strong>Current Candidate:</strong> R25<br>
-                <strong>Status:</strong> Sandbox Green / Not Admitted
-            </p>
-        </div>
-    </div>
-
-</div>
-
-</div>
-
-<footer>
-    © Chris Boosalis • Research • Teaching • Assessment • Scholarly Development
-</footer>
+    <footer>
+        © Chris Boosalis • Research • Teaching • Assessment • Scholarly Development
+    </footer>
 
 </body>
 </html>
