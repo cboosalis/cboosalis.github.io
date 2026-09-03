@@ -11,7 +11,8 @@
         :root {
             --primary: #2563eb;
             --primary-dark: #1d4ed8;
-            --background: #f4f7fb;
+            --banner: #3f3f46;
+            --background: #e5e7eb;
             --card: #ffffff;
             --text: #111827;
             --muted: #6b7280;
@@ -30,7 +31,7 @@
         }
 
         .hero {
-            background: linear-gradient(135deg, #1e3a8a, #2563eb);
+            background: var(--banner);
             color: white;
             text-align: center;
             padding: 70px 20px;
@@ -58,16 +59,22 @@
         }
 
         .card {
-            background: white;
+            background: var(--card);
             border-radius: 16px;
             overflow: hidden;
             box-shadow: 0 8px 24px rgba(0, 0, 0, 0.10);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.16);
         }
 
         .preview {
             width: 100%;
             height: 300px;
-            background: #e5e7eb;
+            background: #d1d5db;
             overflow: hidden;
         }
 
@@ -112,10 +119,12 @@
             padding: 12px 20px;
             border-radius: 8px;
             font-weight: bold;
+            transition: background 0.2s ease, transform 0.2s ease;
         }
 
         .button:hover {
             background: var(--primary-dark);
+            transform: translateY(-1px);
         }
 
         footer {
@@ -167,7 +176,8 @@
 
                     <a class="button"
                        href="https://explorer.chrisboosalis.com"
-                       target="_blank">
+                       target="_blank"
+                       rel="noopener noreferrer">
                         Open Application
                     </a>
 
@@ -195,7 +205,8 @@
 
                     <a class="button"
                        href="https://commenting.chrisboosalis.com"
-                       target="_blank">
+                       target="_blank"
+                       rel="noopener noreferrer">
                         Open Application
                     </a>
 
@@ -224,7 +235,8 @@
 
                     <a class="button"
                        href="https://75326bfd-230b-463f-83f0-8c4f11b60add.plotly.app"
-                       target="_blank">
+                       target="_blank"
+                       rel="noopener noreferrer">
                         Open Application
                     </a>
 
@@ -252,7 +264,8 @@
 
                     <a class="button"
                        href="https://research-app-boosalis-e5h6e3chfsgsbefd.westus-01.azurewebsites.net"
-                       target="_blank">
+                       target="_blank"
+                       rel="noopener noreferrer">
                         Open Application
                     </a>
 
@@ -280,7 +293,8 @@
 
                     <a class="button"
                        href="https://formatter.chrisboosalis.com"
-                       target="_blank">
+                       target="_blank"
+                       rel="noopener noreferrer">
                         Open Application
                     </a>
 
@@ -288,35 +302,35 @@
             </div>
 
 
-           <!-- THESIS PROJECT MENTOR -->
-<div class="card">
+            <!-- THESIS PROJECT MENTOR -->
+            <div class="card">
 
-    <div class="preview">
-        <img src="/images/mentor-coming-soon.png"
-             alt="Thesis Project Mentor">
-    </div>
+                <div class="preview">
+                    <img src="/images/mentor-coming-soon.png"
+                         alt="Thesis Project Mentor">
+                </div>
 
-    <div class="content">
+                <div class="content">
 
-        <span class="badge">Research Support</span>
+                    <span class="badge">Research Support</span>
 
-        <h2>Thesis / Project Mentor</h2>
+                    <h2>Thesis / Project Mentor</h2>
 
-        <p>
-            Faculty and student platform for manuscript review,
-            project-function mapping, source-bound analysis,
-            and scholarly development.
-        </p>
+                    <p>
+                        Faculty and student platform for manuscript review,
+                        project-function mapping, source-bound analysis,
+                        and scholarly development.
+                    </p>
 
-        <a class="button"
-           href="https://thesis-tutor.chrisboosalis.com/"
-           target="_blank">
-            Open Application
-        </a>
+                    <a class="button"
+                       href="https://thesis-tutor.chrisboosalis.com/"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Open Application
+                    </a>
 
-    </div>
-  
-</div>
+                </div>
+            </div>
 
         </div>
 
@@ -327,4 +341,5 @@
     </footer>
 
 </body>
+
 </html>
