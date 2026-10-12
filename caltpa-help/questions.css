@@ -1,0 +1,49 @@
+.question-review{position:relative;border-top:2px solid var(--blue);margin:32px 0 44px;scroll-margin-top:155px}
+.question-map{scroll-margin-top:155px;border-bottom:1px solid var(--line);margin:22px 0}
+.question-map summary{font-size:19px}
+.question-heading{position:relative;padding:22px 38px 18px 0}
+.question-heading .lead-label{margin:0 0 7px}
+.question-heading h3{font-size:25px;line-height:1.35;margin:0}
+.question-permalink{position:absolute;right:0;top:24px;display:grid;place-items:center;width:34px;height:34px;color:var(--muted)}
+.question-review h4{font-size:20px;margin:0 0 12px}
+.current-question{border-block:1px solid var(--line);padding:18px 0}
+.current-question>p:not(.source-note):not(.case-label){font-weight:600;margin:10px 0}
+.question-meaning,.question-rubrics,.source-response,.question-critique,.question-connection{padding:22px 0;border-bottom:1px solid var(--line)}
+.question-rubrics{font-size:16px}
+.question-rubrics h4{color:var(--blue)}
+.question-rubrics p{margin:12px 0}
+.question-rubrics strong{display:block}
+.source-response h4{color:var(--accent)}
+.source-response blockquote{margin:14px 0 18px;padding:8px 23px;border-left:3px solid var(--accent);background:var(--soft);font-size:var(--text-size);line-height:1.7}
+.source-response blockquote p{white-space:pre-wrap;overflow-wrap:anywhere}
+.source-response .excerpt-gap{color:var(--muted);font-size:14px;margin:8px 0}
+.source-locator{font-size:13px;color:var(--muted);border:0;margin:0}
+.source-locator summary{padding:5px 0}
+.question-critique li{padding-left:4px;margin:14px 0}
+.question-connection{border-bottom:0}
+.question-connection h4{color:var(--green)}
+.question-index{margin:28px 0;padding-bottom:16px;border-bottom:1px solid var(--line)}
+.question-index nav{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.question-index strong{display:block;font-size:15px;margin-bottom:8px}
+.question-index a{display:block;font-size:15px;line-height:1.5;padding:6px 0}
+.question-group{margin-top:45px}
+.question-group>h2{border-bottom:1px solid var(--line);padding-bottom:14px}
+.question-group .question-review:first-of-type{margin-top:20px}
+.compact-heading{font-size:19px;margin:0 0 8px}
+.guide-entry{display:flex;justify-content:space-between;align-items:center;gap:24px;padding:20px 0;border-block:1px solid var(--line);margin:24px 0}
+.guide-entry h2{font-size:21px;margin:0 0 8px}
+.guide-entry p{margin:0;font-size:16px}
+.guide-entry a{flex-shrink:0}
+.example-tabs{display:flex;flex-wrap:wrap;gap:0;border-bottom:1px solid var(--line);margin:22px 0}
+.example-tabs a{padding:12px 16px;text-decoration:none;font-size:15px;color:var(--muted)}
+.example-tabs a[aria-current=page]{color:var(--green);box-shadow:inset 0 -3px var(--green);font-weight:700}
+.sample-questions{display:grid;grid-template-columns:1fr 1fr;gap:0 28px;padding:0;list-style:none}
+.sample-questions li{margin:0;border-bottom:1px solid var(--line);padding:11px 0}
+.sample-questions a{font-size:16px}
+.sample-questions small{font-size:12px;display:block;color:var(--muted)}
+.path-options{grid-template-columns:repeat(4,minmax(0,1fr))}
+.preparation-detail>summary{font-size:19px}
+.preparation-detail .band:first-of-type{margin-top:0}
+@media(max-width:1050px){.path-options{grid-template-columns:repeat(2,minmax(0,1fr))}.path-options button{border-bottom:1px solid var(--line)}.guide-entry{align-items:flex-start;flex-direction:column;gap:12px}}
+@media(max-width:760px){.question-heading h3{font-size:23px}.question-review h4{font-size:19px}.question-index nav,.sample-questions{grid-template-columns:1fr}.question-review{scroll-margin-top:180px}.source-response blockquote{padding:7px 15px}.question-meaning,.question-rubrics,.source-response,.question-critique,.question-connection{padding:19px 0}.example-tabs a{padding:12px 10px}.path-options{grid-template-columns:1fr}.question-index nav{gap:16px}}
+@media print{.question-permalink,.question-index,.example-tabs,.guide-entry{display:none}.question-heading h3{font-size:16pt}.question-review h4{font-size:13pt}.question-review{break-inside:auto}.source-response blockquote{font-size:11pt}.question-heading{break-after:avoid}.question-rubrics{font-size:10pt}.source-locator{font-size:9pt}}

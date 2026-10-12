@@ -3,23 +3,68 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="noindex, nofollow">
-  <meta name="description" content="CalTPA Help. Coming soon.">
-  <title>CalTPA Help | Coming Soon</title>
-  <style>
-    * { box-sizing: border-box; }
-    html { color-scheme: light; }
-    body { margin: 0; background: #f7faf9; color: #20312c; font-family: system-ui, sans-serif; letter-spacing: 0; }
-    main { min-height: 100svh; max-width: 760px; margin: auto; padding: 80px 24px; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; }
-    h1 { margin: 0 0 24px; font-size: 40px; line-height: 1.2; overflow-wrap: anywhere; }
-    p { margin: 0; color: #21634e; font-size: 24px; line-height: 1.5; border-top: 3px solid #bf9650; padding-top: 24px; }
-    @media (max-width: 480px) { h1 { font-size: 32px; } main { padding: 48px 24px; } }
-  </style>
+  <meta name="description" content="CalTPA Help: a guided companion for planning, teaching, analyzing evidence, and writing your California teaching performance assessment.">
+  <meta name="color-scheme" content="light dark">
+  <title>CalTPA Help</title>
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="questions.css">
+  <link rel="stylesheet" href="annotations.css">
+  <link rel="stylesheet" href="calapa-model.css">
+  <script src="theme.js"></script>
+  <link rel="stylesheet" href="analysis.css?v=20261011-analysis">
+  <link rel="stylesheet" href="plain-reading.css?v=20261011-reading">
 </head>
 <body>
-  <main>
-    <h1>CalTPA Help</h1>
-    <p>Coming Soon</p>
-  </main>
+  <a class="skip" href="#main">Skip to reading</a>
+  <header class="topbar">
+    <a class="brand" href="#home"><span class="brand-mark" aria-hidden="true">C</span><span>CalTPA <strong>Help</strong></span></a>
+    <nav class="primary-nav" aria-label="Main navigation">
+      <a href="#home" data-nav="home">Overview</a>
+      <a href="#assessment" data-nav="assessment">Your Assessment</a>
+      <a href="#support/writing" data-nav="support">Writing &amp; Evidence</a>
+      <a href="#examples" data-nav="examples">Examples</a>
+      <a href="#planner" data-nav="planner">My Plan</a>
+    </nav>
+    <div class="header-actions" aria-label="Reading tools">
+      <div class="size-control" role="group" aria-label="Reading text size">
+        <button type="button" id="smaller" class="icon-button" aria-label="Decrease text size" title="Decrease text size"><i data-lucide="a-arrow-down"></i></button>
+        <button type="button" id="larger" class="icon-button" aria-label="Increase text size" title="Increase text size"><i data-lucide="a-arrow-up"></i></button>
+      </div>
+      <button type="button" id="theme" class="icon-button" aria-label="Switch to dark theme" title="Switch to dark theme"><i data-lucide="moon"></i></button>
+      <button type="button" id="print" class="icon-button desktop-tool" aria-label="Print this page" title="Print this page"><i data-lucide="printer"></i></button>
+      <button type="button" id="menuBtn" class="icon-button mobile-only" aria-label="Open assessment navigation" title="Open assessment navigation" aria-expanded="false" aria-controls="sidebar"><i data-lucide="menu"></i></button>
+    </div>
+  </header>
+  <div class="layout">
+    <aside id="sidebar" class="sidebar" aria-label="Assessment and study navigation"></aside>
+    <main id="main" tabindex="-1"></main>
+  </div>
+  <dialog id="imageDialog" aria-labelledby="imageTitle"><header class="image-toolbar"><h2 id="imageTitle">Image viewer</h2><div><button type="button" id="imageZoomOut" aria-label="Zoom image out">−</button><button type="button" id="imageZoomIn" aria-label="Zoom image in">+</button><button type="button" id="imageFit">Fit</button><button type="button" id="imageFullscreen" aria-label="Toggle full screen">Full screen</button><button type="button" id="imageClose" aria-label="Close image viewer">Close</button></div></header><div id="imageViewport" tabindex="0" aria-label="Enlarged image. Scroll to pan when zoomed."><img id="largeImage" alt=""></div><p id="imageCaption"></p></dialog>
+  <div id="status" class="status" role="status" aria-live="polite"></div>
+  <dialog id="confirmDialog" aria-labelledby="confirmTitle"><h2 id="confirmTitle">Replace saved study work?</h2><p id="confirmText"></p><div class="button-row"><button type="button" id="confirmCancel">Cancel</button><button type="button" id="confirmYes" class="primary">Replace</button></div></dialog>
+  <input id="importFile" type="file" accept=".json,application/json" hidden>
+  <noscript><p>This reading companion needs JavaScript. You can also go directly to the <a href="https://www.ctc.ca.gov/performance-assessment/resources/">official CalTPA guides and templates</a>.</p></noscript>
+  <script src="vendor/lucide.min.js"></script>
+  <script src="config.js"></script>
+  <script src="parts.js"></script>
+  <script src="support.js?v=20261011-analysis"></script>
+  <script src="examples.js"></script>
+  <script src="instruction.js?v=20261011-analysis"></script>
+  <script src="mmsn.js"></script>
+  <script src="question-map.js"></script>
+  <script src="studies.js"></script>
+  <script src="question-view.js?v=20261011-reading"></script>
+  <script src="case-content.js"></script>
+  <script src="rubric-levels.js?v=20261011-analysis"></script>
+  <script src="template-assets.js"></script>
+  <script src="calapa-model.js?v=20261011-reading"></script>
+  <script src="analysis-content.js?v=20261011-analysis"></script>
+  <script src="analysis-view.js?v=20261011-reading"></script>
+  <script src="plain-reading.js?v=20261011-reading"></script>
+  <script src="app.js?v=20261011-reading"></script>
+  <script src="reading-tools.js"></script>
+  <script src="vendor/perfect-freehand-1.2.2.js"></script>
+  <script src="annotations.js"></script>
 </body>
 </html>

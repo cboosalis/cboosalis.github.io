@@ -1,0 +1,11 @@
+/* Former disclosures now form an ordinary visible reading hierarchy. */
+[data-reading-section]{display:block;margin:1.5rem 0;padding:1rem 0;border-top:1px solid var(--line);scroll-margin-top:120px}
+[data-reading-section]>.reading-heading{display:block;cursor:default;margin:0 0 1rem;padding:0;color:var(--ink);list-style:none}
+[data-reading-section]>.reading-heading::before,[data-reading-section]>.reading-heading::after{content:none!important}
+[data-reading-section]>div{display:block}
+.sidebar [data-reading-section]{margin:1.1rem 0;padding:.7rem 0;border-top:1px solid var(--line)}
+.sidebar [data-reading-section]>.reading-heading{font-size:14px;color:var(--green);margin:0 0 .4rem}
+.sidebar [data-reading-section]>.part-link{display:flex}
+.official-rubric .rubric-source-text{white-space:pre-wrap;overflow-wrap:anywhere}
+.review-descriptors[data-reading-section]>section{margin:1.25rem 0}
+@media(max-width:760px){[data-reading-section]{scroll-margin-top:180px}}
