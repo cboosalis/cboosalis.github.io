@@ -1,0 +1,66 @@
+/* Codex-inspired neutral interface. Keep the teaching graphics and ink colors intact.
+   Legacy color names remain aliases so every existing page shares this palette. */
+@media screen {
+  :root {
+    --ink: #242424;
+    --muted: #606060;
+    --line: #d9d9d9;
+    --soft: #f5f5f5;
+    --surface: #ffffff;
+    --green: #343434;
+    --pale: #ebebeb;
+    --blue: #245a91;
+    --accent: #446b9e;
+    --warm: #7a541d;
+    --sidebar-surface: #f9f9f9;
+  }
+
+  :root[data-theme=dark] {
+    --ink: #ededed;
+    --muted: #b4b4b4;
+    --line: #414141;
+    --soft: #292929;
+    --surface: #212121;
+    --green: #e2e2e2;
+    --pale: #333333;
+    --blue: #a8c8ef;
+    --accent: #9fbbdf;
+    --warm: #dfbf83;
+    --sidebar-surface: #181818;
+  }
+
+  .sidebar {
+    background: var(--sidebar-surface);
+  }
+
+  .text-size-options button[aria-pressed=true] {
+    color: var(--surface);
+    background: var(--ink);
+    border-color: var(--ink);
+  }
+
+  .expand-label,
+  .image-expand > span {
+    color: #343434;
+    border-color: #d9d9d9;
+  }
+
+  #imageDialog::backdrop {
+    background: #000000cc;
+  }
+
+  #imageViewport {
+    background: var(--soft);
+  }
+
+  .review-intro,
+  .review-version,
+  .review-next {
+    border-left-color: var(--accent);
+  }
+
+  .review-quotation blockquote,
+  .review-descriptor {
+    border-left-color: var(--muted);
+  }
+}
