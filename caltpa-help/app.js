@@ -42,7 +42,7 @@
     return `<header class="page-head"><div class="eyebrow">${esc(eyebrow)}</div><h1>${esc(title)}</h1>${description?`<p class="deck">${esc(description)}</p>`:''}</header>`;
   }
   function footer() {
-    return `<footer class="page-footer"><nav aria-label="Additional information"><a href="#resources">Official documents</a><a href="#support/privacy">Originality & privacy</a><a href="#glossary">Glossary</a><a href="#notes">My notes</a><a href="#about">About & annual updates</a></nav><p>Independent instructional companion. CTC/Pearson directions and your preparation program govern your submission. Instructional rubric estimates are not official scores and do not establish a passing result.</p><p>Academic year ${D.year} · MS/SS requirements audit October 8, 2026 · Full seven-case analysis and rubric review October 11, 2026.</p></footer>`;
+    return `<footer class="page-footer"><nav aria-label="Additional information"><a href="#resources">Official documents</a><a href="#support/privacy">Originality & privacy</a><a href="#glossary">Glossary</a><a href="#notes">My notes</a><a href="#about">About & annual updates</a></nav><p>Independent instructional companion. CTC/Pearson directions and your preparation program govern your submission. Instructional rubric estimates are not official scores and do not establish a passing result.</p><p>Academic year ${D.year} · MS/SS requirements audit October 8, 2026 · Historical seven-case review October 11, 2026 · MS academic revision October 13, 2026.</p></footer>`;
   }
   // Earlier saved notes remain readable/exportable in Notes and Backup.
   const noteBox = () => '';
@@ -58,9 +58,9 @@
   function sidebar() {
     const a=active(),id=state.activeAssessment;
     const size=parseInt(getComputedStyle(document.documentElement).getPropertyValue('--text-size'),10)||18;
-    side.innerHTML=D.readingHTML(`<div class="sidebar-reading"><h2>Text size</h2><div class="text-size-options" role="group" aria-label="Text size">${[[16,'A'],[18,'A+'],[21,'A++']].map(([n,label])=>`<button data-text-size="${n}" aria-label="${n} pixel reading text" aria-pressed="${size===n}">${label}</button>`).join('')}</div></div><h2 class="sidebar-label">Your pathway</h2><nav class="pathway-nav" aria-label="Credential pathways">${Object.entries(D.tracks).map(([k,t])=>`<button data-track="${k}" aria-pressed="${state.track===k}"><i data-lucide="${k==='ms'?'school':k==='ss'?'graduation-cap':'accessibility'}" aria-hidden="true"></i><span>${esc(t.name)}</span></button>`).join('')}</nav><h2 class="sidebar-label">${esc(a.short)}</h2><nav aria-label="Assessment parts"><a href="#assessment/${id}" ${current===`assessment/${id}`?'aria-current="page"':''}>${icon('map')}Assessment and examples</a>${D.steps.map((step,i)=>`<details ${current.startsWith('part/'+id) && parts(id).find(x=>current===`part/${id}/${x.id}`)?.step===i+1?'open':''}><summary>${i+1}. ${esc(step.name)}</summary>${parts(id).filter(x=>x.step===i+1).map(x=>`<a class="part-link" href="#part/${id}/${x.id}" ${current===`part/${id}/${x.id}`?'aria-current="page"':''}><span class="part-letter">${x.id}</span><span>${esc(x.title)}</span></a>`).join('')}</details>`).join('')}</nav><nav class="side-section" aria-label="Study resources"><h2 class="sidebar-label">Study resources</h2><a href="#examples/${state.track}">${icon('book-open')}Example directory</a><a href="#planner">${icon('calendar-days')}Planning reference</a><a href="#support/submission">${icon('list-checks')}Submission requirements</a><a href="#glossary">${icon('book-a')}Glossary</a><a href="#notes">${icon('notebook-pen')}Notes and backup</a></nav><div class="source-small">${D.year} · Guide V${a.version}<br>Instructional examples</div>`);
+    side.innerHTML=D.readingHTML(`<div class="sidebar-reading"><h2>Text size</h2><div class="text-size-options" role="group" aria-label="Text size">${[[16,'A'],[18,'A+'],[21,'A++']].map(([n,label])=>`<button data-text-size="${n}" aria-label="${n} pixel reading text" aria-pressed="${size===n}">${label}</button>`).join('')}</div></div><h2 class="sidebar-label">Your pathway</h2><nav class="pathway-nav" aria-label="Credential pathways">${Object.entries(D.tracks).map(([k,t])=>`<button data-track="${k}" aria-pressed="${state.track===k}"><i data-lucide="${k==='ms'?'school':k==='ss'?'graduation-cap':'accessibility'}" aria-hidden="true"></i><span>${esc(t.name)}</span></button>`).join('')}</nav>${state.track==='ms'&&['home','resources','evidence-help'].includes(current)?'<nav class="side-section" aria-label="Multiple Subject cycles"><h2 class="sidebar-label">Both Multiple Subject cycles</h2><a href="#assessment/ms-math">Cycle 1 · Mathematics</a><a href="#assessment/ms-literacy">Cycle 2 · Language arts</a></nav>':''}<h2 class="sidebar-label">Selected cycle: ${esc(a.short)}</h2><nav aria-label="Assessment parts"><a href="#assessment/${id}" ${current===`assessment/${id}`?'aria-current="page"':''}>${icon('map')}Assessment and examples</a>${D.steps.map((step,i)=>`<details ${current.startsWith('part/'+id) && parts(id).find(x=>current===`part/${id}/${x.id}`)?.step===i+1?'open':''}><summary>${i+1}. ${esc(step.name)}</summary>${parts(id).filter(x=>x.step===i+1).map(x=>`<a class="part-link" href="#part/${id}/${x.id}" ${current===`part/${id}/${x.id}`?'aria-current="page"':''}><span class="part-letter">${x.id}</span><span>${esc(x.title)}</span></a>`).join('')}</details>`).join('')}</nav><nav class="side-section" aria-label="Study resources"><h2 class="sidebar-label">Study resources</h2><a href="#examples/${state.track}">${icon('book-open')}Example directory</a><a href="#planner">${icon('calendar-days')}Planning reference</a><a href="#support/submission">${icon('list-checks')}Submission requirements</a><a href="#glossary">${icon('book-a')}Glossary</a><a href="#notes">${icon('notebook-pen')}Notes and backup</a></nav><div class="source-small">${D.year} · Guide V${a.version}<br>Instructional examples</div>`);
     const ids=D.tracks[state.track].assessments;
-    document.querySelector('.primary-nav').innerHTML=`<a href="#home" ${current==='home'?'aria-current="page"':''}>Overview</a>${ids.map(k=>`<a href="#assessment/${k}" ${['assessment/'+k,'questions/'+k,'example/'+k].includes(current)||current.startsWith('part/'+k+'/')?'aria-current="page"':''}>${esc(D.assessments[k].track==='ss'?D.assessments[k].short:D.assessments[k].type===1?'Math Assessment':'Literacy Assessment')}</a>`).join('')}<a href="#resources" ${current==='resources'?'aria-current="page"':''}>More Sources</a><a href="#evidence-help" ${current==='evidence-help'||current.startsWith('support/')?'aria-current="page"':''}>Teaching Evidence Help</a>`;
+    document.querySelector('.primary-nav').innerHTML=`<a href="#home" ${current==='home'?'aria-current="page"':''}>Overview</a>${ids.map(k=>`<a href="#assessment/${k}" ${['assessment/'+k,'questions/'+k,'example/'+k].includes(current)||current.startsWith('part/'+k+'/')?'aria-current="page"':''}>${esc(D.assessments[k].track==='ms'?(D.assessments[k].type===1?'Mathematics':'Language Arts'):D.assessments[k].track==='ss'?D.assessments[k].short:D.assessments[k].type===1?'Math Assessment':'Literacy Assessment')}</a>`).join('')}<a href="#resources" ${current==='resources'?'aria-current="page"':''}>More Sources</a><a href="#evidence-help" ${current==='evidence-help'||current.startsWith('support/')?'aria-current="page"':''}>Teaching Evidence Help</a>`;
   }
   function guideNav(id) {
     return D.studiesFor(id).length?`<a href="#questions/${id}" ${current===`questions/${id}`?'aria-current="page"':''}>${icon('book-open')}Understanding the questions</a>`:'';
@@ -99,7 +99,7 @@
     return crumb([[D.tracks[a.track].name],[a.short,'#assessment/'+id],['Part '+letter]])+head(`Step ${item.step}: ${D.steps[item.step-1].name}`,`Part ${letter}: ${item.title}`,item.purpose)+
       `<div class="fact-line"><span>${icon('file-text')}${esc(item.limit)}</span></div>`+sourceStrip(a,a.pages[letter],template)+toc([...(D.questionMap?.[id]?.[letter]?[['current-questions','Current task']]:[]),...(D.hasPartStudies(id,letter)?[['question-studies','Questions & examples']]:[]),['prepare','Preparation'],...(lesson?[['rubric-lens','Rubric']]:[])])+
       (D.pathwayNotes[id]?.[letter]?`<div class="callout ${letter==='H'&&a.type===1?'caution':''}"><h3>${esc(D.tracks[a.track].name)} focus</h3>${p(D.pathwayNotes[id][letter])}</div>`:'')+
-      D.renderPartStudies(id,letter)+
+      (D.renderMSPartContext?D.renderMSPartContext(id,letter):'')+D.renderPartStudies(id,letter)+
       (D.questionMap?.[id]?.[letter]?'<details class="preparation-detail"><summary>Preparation and writing guidance</summary><div>':'')+
       section('prepare','Before you write',item.prepare.map(p).join(''))+
       section('write','Develop a clear, supported response',item.write.map(p).join(''))+
@@ -222,10 +222,11 @@
       if(D.assessments[sampleId]){state.activeAssessment=sampleId;state.track=D.assessments[sampleId].track;save();}
       else if(D.tracks[id]){const second=active().type===2;state.track=id;state.activeAssessment=D.tracks[id].assessments[second?1:0];save();}
     }
-    if(['assessment','part','planner','questions'].includes(kind)&&D.assessments[id]){state.activeAssessment=id;state.track=D.assessments[id].track;save();}
+    if(['assessment','part','planner','questions','rubrics'].includes(kind)&&D.assessments[id]){state.activeAssessment=id;state.track=D.assessments[id].track;save();}
     let html;
     if(kind==='home')html=D.renderOverview(state.track)+noteBox('home/'+state.track);
-    else if(kind==='evidence-help')html=D.renderEvidenceHelp()+noteBox(current);
+    else if(kind==='evidence-help')html=D.renderEvidenceHelp(state.track)+noteBox(current);
+    else if(kind==='rubrics'&&['ms-math','ms-literacy'].includes(id))html=D.renderMSRubrics(id);
     else if(kind==='review'&&D.deepReviews[id])html=D.renderDeepReview(id)+noteBox(current);
     else if(kind==='example'&&D.rewrittenCases[id])html=D.renderRewrittenCase(id)+noteBox(current);
     else if(kind==='assessment'&&D.assessments[id])html=D.renderAssessment(id)+noteBox(current);
@@ -233,7 +234,7 @@
     else if(kind==='support'&&D.supportPages[id])html=supportPage(id);
     else if(kind==='examples')html=examples(id);
     else if(kind==='questions'&&D.assessments[id]&&D.studiesFor(id).length)html=D.renderQuestionGuide(id)+noteBox(current);
-    else if(kind==='resources')html=resources()+D.renderReferenceLibrary();
+    else if(kind==='resources')html=state.track==='ms'?D.renderAcademicSources()+D.renderReferenceLibrary():resources()+D.renderReferenceLibrary();
     else if(kind==='planner'){current='planner';html=planner();}
     else if(kind==='notes')html=notes();
     else if(kind==='about')html=about();
@@ -241,7 +242,7 @@
     else html=head('Page not found','Let us get you back to the assessment','This reading link is not available.')+'<a class="primary-link" href="#home">Overview '+icon('arrow-right')+'</a>';
     main.dataset.pageVersion=D.year+'|'+(D.contentRevision||'original')+'|'+state.track+'|'+state.activeAssessment+'|'+current;main.innerHTML=D.readingHTML(`<article>${html}${footer()}</article>`);
     sidebar();addGuideNav();side.innerHTML=D.readingHTML(side.innerHTML);side.classList.remove('open');document.getElementById('menuBtn').setAttribute('aria-expanded','false');
-    const nav=['part','questions'].includes(kind)?'assessment':['review','example'].includes(kind)?'examples':kind;
+    const nav=['part','questions','rubrics'].includes(kind)?'assessment':['review','example'].includes(kind)?'examples':kind;
     document.querySelectorAll('[data-nav]').forEach(el=>{if(el.dataset.nav===nav)el.setAttribute('aria-current','page');else el.removeAttribute('aria-current');});
     document.title=main.querySelector('h1').textContent+' | CalTPA Help';window.lucide?.createIcons();
     const target=new URLSearchParams(query).get('section');
