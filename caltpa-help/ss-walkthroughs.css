@@ -1,0 +1,16 @@
+/* Single Subject uses the retained Multiple Subject reading style and neutral palette. */
+.subject-selector{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:20px 0 28px}
+.subject-selector a{padding:12px 14px;border:1px solid var(--line);border-radius:6px;text-decoration:none;line-height:1.4}
+.subject-selector small{display:block;color:var(--muted);font-size:.8em;margin-top:4px}
+.subject-selector [aria-current=page]{border-color:var(--ink);background:var(--soft);font-weight:700}
+.academic-ss .example-facts{display:flex;flex-wrap:wrap;gap:8px 22px;color:var(--muted);font-size:.9em}
+.academic-ss .materials-key{border-top:2px solid var(--line);margin-top:32px;padding-top:24px}
+.academic-ss .lesson-table{max-width:100%;overflow:auto}
+.academic-ss .lesson-table table{min-width:620px}
+.academic-ss .table-wrap{max-width:100%;overflow:auto;margin:20px 0}
+.academic-ss .table-wrap table{min-width:640px}
+.academic-ss svg.number-line{width:100%;height:auto;display:block;margin:18px 0}
+.academic-ss .case-boundary{border-left:3px solid var(--muted);padding:8px 20px;background:var(--soft)}
+.academic-ss .academic-section h3{margin-top:1.7rem}
+@media(max-width:720px){.subject-selector{grid-template-columns:repeat(2,minmax(0,1fr))}.subject-selector a{padding:10px}.academic-ss .case-boundary{padding:8px 14px}}
+@media print{.subject-selector{display:none}.academic-ss .lesson-table{overflow:visible}.academic-ss .lesson-table table{min-width:0}}
