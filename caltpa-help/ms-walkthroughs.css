@@ -1,0 +1,30 @@
+/* Question-first MS reading, using the existing neutral palette and accessibility tools. */
+.candidate-walkthrough .start-here{padding:20px 24px;background:var(--soft);border:1px solid var(--line);border-radius:8px;margin:24px 0}
+.candidate-walkthrough .start-here h2{margin-top:0}
+.candidate-walkthrough .walk-boundary{margin:24px 0;padding:8px 20px;border-left:3px solid var(--muted);background:var(--soft);font-size:.91em}
+.candidate-walkthrough .walk-boundary h2,.candidate-walkthrough .walk-boundary h3{font-size:1.1em}
+.candidate-walkthrough .part-strip{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:24px 0}
+.candidate-walkthrough .part-strip a{border:1px solid var(--line);padding:10px 12px;border-radius:6px;text-decoration:none;line-height:1.4}
+.candidate-walkthrough .part-strip small{display:block;font-size:.74em;color:var(--muted);margin-top:3px}
+.candidate-walkthrough .part-strip [aria-current=page]{background:var(--pale);border-color:var(--ink);font-weight:700}
+.candidate-walkthrough .question-toc{display:flex;flex-wrap:wrap;gap:10px 18px;padding:18px 0;border-block:1px solid var(--line);margin:24px 0;font-size:.85em}
+.candidate-walkthrough .prompt-group{margin-top:40px;padding:12px 0;border-bottom:2px solid var(--line);font-size:1.35em}
+.candidate-walkthrough .prompt-model{margin:30px 0 42px;padding-top:16px;scroll-margin-top:140px;border-top:1px solid var(--line)}
+.candidate-walkthrough .prompt-model>h3,.candidate-walkthrough .prompt-model>h4{margin:0 0 18px;font-size:1.18em;color:var(--ink)}
+.candidate-walkthrough .walk-label{font-size:.8em;font-weight:700;letter-spacing:.025em;color:var(--muted);margin-bottom:8px}
+.candidate-walkthrough .official-question blockquote{margin:8px 0 22px;border-left:3px solid var(--muted);font-size:.97em}
+.candidate-walkthrough .worked-response{background:var(--soft);border:1px solid var(--line);border-radius:6px;padding:12px 20px;margin:18px 0}
+.candidate-walkthrough .worked-response p:last-child{margin-bottom:8px}
+.candidate-walkthrough .response-reason{font-size:.94em}
+.candidate-walkthrough .rubric-bridge,.candidate-walkthrough .commentary-fields,.candidate-walkthrough .part-check{border-left:3px solid var(--accent);padding:4px 20px;margin:26px 0}
+.candidate-walkthrough .rubric-bridge h3,.candidate-walkthrough .part-check h3{font-size:1.08em}
+.candidate-walkthrough .walk-next{display:flex;justify-content:space-between;gap:24px;border-top:1px solid var(--line);padding:24px 0;margin-top:30px}
+.candidate-walkthrough .cycle-output-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 24px}
+.candidate-walkthrough .cycle-output-list section{border-bottom:1px solid var(--line);padding:8px 0}
+.candidate-walkthrough .cycle-output-list h4{margin:6px 0}
+.candidate-walkthrough .cycle-output-list p{margin:8px 0;font-size:.93em}
+.candidate-walkthrough .table-scroll{max-width:100%}
+.candidate-walkthrough .button-row a{display:inline-block;border:1px solid var(--line);padding:10px 14px;border-radius:6px}
+.candidate-walkthrough .breadcrumb{flex-wrap:wrap}
+@media(max-width:700px){.candidate-walkthrough .part-strip{grid-template-columns:repeat(2,minmax(0,1fr))}.candidate-walkthrough .cycle-output-list{grid-template-columns:1fr}.candidate-walkthrough .walk-next{flex-direction:column}.candidate-walkthrough .start-here{padding:16px}.candidate-walkthrough .worked-response{padding:10px 14px}.candidate-walkthrough .walk-boundary{padding:4px 14px}.candidate-walkthrough .prompt-model{scroll-margin-top:185px}}
+@media print{.candidate-walkthrough .part-strip,.candidate-walkthrough .question-toc,.candidate-walkthrough .walk-next{display:none}.candidate-walkthrough .prompt-model{break-inside:auto}.candidate-walkthrough .worked-response{break-inside:avoid}.candidate-walkthrough .cycle-output-list{grid-template-columns:1fr}}
