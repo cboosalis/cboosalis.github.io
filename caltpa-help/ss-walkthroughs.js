@@ -142,5 +142,5 @@
   D.renderHistoricalQuestionGuide=id=>isSS(id)?`<aside class="callout"><h2>Historical question studies—not the current worked examples</h2><p>These studies preserve the earlier supplied sample, source inconsistencies, and critique. They do not supply the current template structure or new classroom evidence. ${a('#assessment/'+id,'Choose a current subject-specific example')}.</p></aside>`+oldQuestions(id).replaceAll('#questions/ss-c1','#source-questions/ss-c1').replaceAll('#questions/ss-c2','#source-questions/ss-c2'):oldHistorical(id);
   for(const name of ['renderRewrittenCase','renderDeepReview']){const old=D[name];D[name]=(...args)=>old(...args).replaceAll('#questions/ss-c1','#source-questions/ss-c1').replaceAll('#questions/ss-c2','#source-questions/ss-c2');}
   D.ss.outputs=outputs;D.ss.limits=limits;D.ss.rubricParts=rubricParts;
-  D.contentRevision+='-ss-eight-walkthroughs-20261014';
+  D.ssContentRevision+='-ss-eight-walkthroughs-20261014';
 })();

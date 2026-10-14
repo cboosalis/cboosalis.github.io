@@ -260,7 +260,7 @@
     else if(kind==='about')html=about();
     else if(kind==='glossary')html=head('Reading support','Glossary','Plain-language explanations. Use the official guide glossary for the assessment definitions.')+`<dl class="glossary">${D.glossary.map(([k,v])=>`<dt>${esc(k)}</dt><dd>${esc(v)}</dd>`).join('')}</dl><p class="source-note">${guide(active(),1,'Current assessment guide and glossary')}</p>`;
     else html=head('Page not found','Let us get you back to the assessment','This reading link is not available.')+'<a class="primary-link" href="#home">Overview '+icon('arrow-right')+'</a>';
-    main.dataset.pageVersion=D.year+'|'+(D.contentRevision||'original')+'|'+state.track+'|'+state.activeAssessment+'|'+current+(state.track==='ss'?'|'+D.ssSubject:'');main.innerHTML=D.readingHTML(`<article>${html}${footer()}</article>`);
+    main.dataset.pageVersion=D.year+'|'+(state.track==='ss'?D.ssContentRevision:(D.contentRevision||'original'))+'|'+state.track+'|'+state.activeAssessment+'|'+current+(state.track==='ss'?'|'+D.ssSubject:'');main.innerHTML=D.readingHTML(`<article>${html}${footer()}</article>`);
     sidebar();addGuideNav();side.innerHTML=D.readingHTML(side.innerHTML);side.classList.remove('open');document.getElementById('menuBtn').setAttribute('aria-expanded','false');
     const nav=['part','questions','lesson','rubrics'].includes(kind)?'assessment':['review','example','source-questions'].includes(kind)?'examples':kind;
     document.querySelectorAll('[data-nav]').forEach(el=>{if(el.dataset.nav===nav)el.setAttribute('aria-current','page');else el.removeAttribute('aria-current');});
