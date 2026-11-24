@@ -231,7 +231,7 @@
     const requestedSubject=new URLSearchParams(query).get('subject');
     if(ownKey(D.ss.subjects,requestedSubject)){state.ssSubject=requestedSubject;save();}
     D.ssSubject=state.ssSubject||'english';
-    if(kind==='assessment'&&!id){location.replace('#assessment/'+state.activeAssessment);return;}
+    if(kind==='assessment'&&!id){location.hash='assessment/'+encodeURIComponent(state.activeAssessment);return;}
     current=path;
     if(['example','review'].includes(kind)&&D.rewrittenCases[id]){state.activeAssessment=D.rewrittenCases[id].path;state.track=D.assessments[state.activeAssessment].track;save();}
     if(kind==='examples'){
