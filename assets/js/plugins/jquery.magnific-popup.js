@@ -353,9 +353,22 @@ MagnificPopup.prototype = {
 		$('html').css(windowStyles);
 		
 		// add everything to DOM
-		// A string target is a selector, never HTML supplied by plugin options.
-		var prependTarget = typeof mfp.st.prependTo === 'string' ? $(document).find(mfp.st.prependTo) : mfp.st.prependTo;
-		mfp.bgOverlay.add(mfp.wrap).prependTo( prependTarget || $(document.body) );
+		// Resolve selectors to nodes and insert existing popup elements without parsing HTML.
+		var prependTargets = mfp.st.prependTo;
+		if (typeof prependTargets === 'string') {
+			prependTargets = document.querySelectorAll(prependTargets);
+		} else if (!prependTargets) {
+			prependTargets = [document.body];
+		} else if (prependTargets.nodeType) {
+			prependTargets = [prependTargets];
+		}
+		for (var targetIndex = 0; targetIndex < prependTargets.length; targetIndex++) {
+			var targetNode = prependTargets[targetIndex];
+			if (!targetNode || targetNode.nodeType !== 1) continue;
+			var useOriginal = targetIndex === prependTargets.length - 1;
+			targetNode.insertBefore(useOriginal ? mfp.wrap[0] : mfp.wrap.clone(true)[0], targetNode.firstChild);
+			targetNode.insertBefore(useOriginal ? mfp.bgOverlay[0] : mfp.bgOverlay.clone(true)[0], targetNode.firstChild);
+		}
 
 		// Save last focused element
 		mfp._lastFocusedEl = document.activeElement;
